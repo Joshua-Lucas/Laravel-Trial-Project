@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PageController@home');
+Route::post('/', 'PageController@store');
+Route::get('/visitor', 'PageController@visitor');
+
+
+
+
