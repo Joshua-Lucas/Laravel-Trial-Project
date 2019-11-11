@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', 'PageController@home');
+
+// Route::resource('visitor', 'PageController');
+
+Route::get('/', 'PageController@index');
 Route::post('/', 'PageController@store');
-Route::get('/visitor', 'PageController@visitor');
+Route::get('/create', 'PageController@create');
 
 
 

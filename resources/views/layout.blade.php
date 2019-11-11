@@ -8,7 +8,7 @@
     <div>
         <ul>
             <li><a href="/">home</a></li>
-            <li><a href="/visitor">visited</a></li>
+            <li><a href="/create">visited</a></li>
         
         </ul>
 

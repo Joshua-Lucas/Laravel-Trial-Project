@@ -2,25 +2,26 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     
-    Public function home() 
+    Public function index() 
     {
         
         $visitors = \App\Visitor::all();
 
-        return view('welcome', ['visitors' => $visitors]);
+        return view('visitor/welcome', ['visitors' => $visitors]);
 
     }
 
 
-    Public function visitor()
+    Public function create()
     {
 
-        return view('visitor');
+        return view('/visitor/create');
 
 
     }
