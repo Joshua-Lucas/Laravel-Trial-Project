@@ -8,7 +8,7 @@
 
 <form method="POST" action='/'>
 
-    {{ csrf_field() }}
+    @csrf
 
     <div>
         <input type="text" name='name' placeholder='Visitor name'>
@@ -23,8 +23,15 @@
     <div>
     
         <button type="submit">Submit Visit</button>
-
+        <!-- <form  action="">
+            <button type='submit'>Edit Sumbittion</button>
+        </form>
+        <form action="">
+            <button type='submit'>Delete Visit</button>
+        </form> -->
     </div>
+
+
 
 </form>
 
