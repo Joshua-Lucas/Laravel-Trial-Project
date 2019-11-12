@@ -12,11 +12,14 @@
 */
 
 
+
+
 // Route::resource('visitor', 'PageController');
 
 Route::get('/', 'PageController@index');
 Route::post('/', 'PageController@store');
 Route::get('/create', 'PageController@create');
+Route::delete('/create/{visitor}','PageController@destroy');
 
 
 

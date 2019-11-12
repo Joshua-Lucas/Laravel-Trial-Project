@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\visitor;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -42,6 +42,17 @@ class PageController extends Controller
 
 
     }
+
+
+    public function delete($id)
+    {
+
+
+
+
+    }
+
+
 
 
 }
