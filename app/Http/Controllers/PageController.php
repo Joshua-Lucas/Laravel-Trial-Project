@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\visitor;
-use Illuminate\Http\Request;
+use App\project;
+
 
 class PageController extends Controller
 {
@@ -14,6 +14,15 @@ class PageController extends Controller
         $project = \App\project::all();
 
         return view('projects.index', ['project' => $project]);
+
+    }
+
+
+    Public function show(Project $project)
+    {
+
+
+        return view('/projects/show', compact('project'));
 
     }
 
@@ -44,6 +53,36 @@ class PageController extends Controller
 
 
     }
+
+    public function edit(Project $project)
+    {
+
+
+        return view('projects/edit', compact('project'));
+
+
+    }
+
+
+
+
+    public function update(Project $project)
+    {
+
+        // $project->update(request(['supervisor','comments',]));
+
+        $project->supervisor= request('supervisor');
+        $project->comments = request('comments');
+
+        $project->save(); 
+
+
+        return redirect('/');
+
+
+
+    }
+
 
 
     public function delete($id)

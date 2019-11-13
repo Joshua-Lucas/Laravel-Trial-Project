@@ -17,9 +17,12 @@
 //  Route::resource('projects', 'PageController');
 
 Route::get('/', 'PageController@index');
-Route::post('/', 'PageController@store');
+Route::get('/projects/{project}', 'PageController@show');
 Route::get('/create', 'PageController@create');
-Route::delete('/create/{visitor}','PageController@destroy');
+Route::post('/', 'PageController@store');
+Route::get('/projects/{project}/edit', 'PageController@edit');
+Route::patch('/projects/{project}', 'PageController@update');
+Route::delete('/create/{project}','PageController@destroy');
 
 
 

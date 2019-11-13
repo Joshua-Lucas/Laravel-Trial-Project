@@ -1,10 +1,10 @@
 @extends('layout')
 
-@section('title', 'Visited')
+@section('title', 'Project Log')
 
 @section('content')
 
-<h1>Log Your Visit</h1>
+<h1>Project Work Log</h1>
 
 <form method="POST" action='/'>
 
@@ -30,7 +30,7 @@
 
     <div>
     
-        <button type="submit">Submit Visit</button>
+        <button type="submit">Log Project</button>
 
     </div>
 
