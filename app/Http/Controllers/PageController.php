@@ -30,13 +30,15 @@ class PageController extends Controller
     {
 
 
-        $visitor = new \App\Visitor;
+        $project= new \App\project;
 
 
-        $visitor->name = request('name');
-        $visitor->comments = request('comments');
+        $project->title = request('title');
+        $project->supervisor = request('supervisor');
+        $project->comments = request('comments');
+        $project->date_complete = request('date_complete');
 
-        $visitor->save();
+        $project->save();
 
         return redirect('/');
 
