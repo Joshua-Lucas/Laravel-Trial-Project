@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <h1>Welcome</h1>
+    <h1>Project Managment Homepage</h1>
 
     <p>I have created this project to test and apply what I have been learning in the Laracast course on Laravel from Scratch.</p>
 

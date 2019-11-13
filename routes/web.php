@@ -14,7 +14,7 @@
 
 
 
-// Route::resource('visitor', 'PageController');
+//  Route::resource('projects', 'PageController');
 
 Route::get('/', 'PageController@index');
 Route::post('/', 'PageController@store');
