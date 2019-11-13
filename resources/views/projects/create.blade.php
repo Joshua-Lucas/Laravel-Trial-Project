@@ -11,24 +11,27 @@
     @csrf
 
     <div>
-        <input type="text" name='name' placeholder='Visitor name'>
+        <input type="text" name='title' placeholder='Project Title'>
+    </div>
+
+    <div>
+        <input type="text" name='supervisor' placeholder='Supervisor Name'>
     </div>
 
     <div>
     
-        <textarea name="comments" placeholder='visitor comments'></textarea>
+        <textarea name="comments" placeholder='Project comments'></textarea>
     
     </div>    
 
     <div>
+        <input type="date" name='sdate_complete' placeholder='Date Complete'>
+    </div>
+
+    <div>
     
         <button type="submit">Submit Visit</button>
-        <!-- <form  action="">
-            <button type='submit'>Edit Sumbittion</button>
-        </form>
-        <form action="">
-            <button type='submit'>Delete Visit</button>
-        </form> -->
+
     </div>
 
 
