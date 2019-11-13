@@ -11,9 +11,9 @@ class PageController extends Controller
     Public function index() 
     {
         
-        $visitors = \App\Visitor::all();
+        $project = \App\project::all();
 
-        return view('projects.index', ['visitors' => $visitors]);
+        return view('projects.index', ['project' => $project]);
 
     }
 

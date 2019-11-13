@@ -12,10 +12,10 @@
 
     <h2>Previous visitors</h2>
 
-    @foreach($visitors as $visitor)
+    @foreach($project as $project)
 
         <div>
-            <li>{{$visitor->name}}</li>
+            <li>{{$project->title}}</li>
         </div>
 
     @endforeach
