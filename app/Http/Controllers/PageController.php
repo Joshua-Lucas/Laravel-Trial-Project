@@ -36,7 +36,16 @@ class PageController extends Controller
     public function store()
     {
 
-        Project:: create(request(['title','supervisor','comments','date_complete']));
+
+        $attributes =request()->validate ([
+            'title' => ['required', 'min:3'],
+            'supervisor' => ['required', 'min:3', ],
+            'comments' => ['required','max:255'],
+            'date_complete'
+        ]);
+
+
+        Project:: create($attributes);
 
         return redirect('/');
 
@@ -58,7 +67,14 @@ class PageController extends Controller
     public function update(Project $project)
     {
 
-        $project->update(request(['supervisor','comments',]));
+
+        $attributes =request()->validate ([
+            'supervisor' => ['required', 'min:3', ],
+            'comments' => ['required','max:255'],
+        ]);
+
+
+        $project->update($attributes);
 
 
         return view('/projects/show',compact('project'));

@@ -11,21 +11,23 @@
     @csrf
 
     <div>
-        <input type="text" name='title' placeholder='Project Title'>
+        <input type="text" name='title' placeholder='Project Title' value='{{ old("title") }}'>
     </div>
 
     <div>
-        <input type="text" name='supervisor' placeholder='Supervisor Name'>
+        <input type="text" name='supervisor' placeholder='Supervisor Name' value='{{ old("supervisor") }}'>
     </div>
 
     <div>
     
-        <textarea name="comments" placeholder='Project comments'></textarea>
+        <textarea name="comments" placeholder='Project comments'>{{ old("comments") }}</textarea>
     
     </div>    
 
     <div>
-        <input type="date" name='sdate_complete' placeholder='Date Complete'>
+        <label for="date_complete">Date Complete</label>
+            <input type="date" name='date_complete' placeholder='Date Complete'>
+        
     </div>
 
     <div>
@@ -33,6 +35,23 @@
         <button type="submit">Log Project</button>
 
     </div>
+
+    
+    @if ($errors->any())
+        <div>
+            <ul>
+            
+            @foreach($errors->all() as $error)
+
+                <li>{{ $error }}</li> 
+
+            @endforeach
+           
+           </ul>
+
+        </div>
+    @endif
+
 
 
 
