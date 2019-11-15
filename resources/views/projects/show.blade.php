@@ -3,14 +3,13 @@
 
 @section('content')
 
-<h1>{{ $project->title }}</h1>
-    <div>
-        <h3>Supervisor:{{ $project->supervisor }}</h3>
-    </div>
-
-        
-    <div>{{$project->created_at}},  {{ $project->comments}}</div>
-
+<div>
+    <h1>{{ $project->title }}</h1>
+   
+    <h2>Supervisor:{{ $project->supervisor }}</h2>
+    
+    <h3>{{ $project->comments}}</h3>
+</div>
     <div>
     <a href='/projects/{{$project -> id}}/edit'>Update Project Log</a>
     </div>
