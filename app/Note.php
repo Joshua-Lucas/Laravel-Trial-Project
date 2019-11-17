@@ -9,7 +9,7 @@ class Note extends Model
 
     protected $guarded = [];
 
-    public function project()
+    public function projects()
     {
 
         return $this->belongTo(Project::class);

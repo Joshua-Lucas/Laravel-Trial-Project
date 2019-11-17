@@ -18,7 +18,7 @@ class CreateProjectsTable extends Migration
             $table->string('title');
             $table->string('supervisor');
             $table->text('comments');
-            $table->date('date_complete');
+            // $table->date('date_complete');
             $table->timestamps();
         });
     }

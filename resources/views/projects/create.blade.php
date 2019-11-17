@@ -24,11 +24,11 @@
     
     </div>    
 
-    <div>
+    <!-- <div>
         <label for="date_complete">Date Complete</label>
             <input type="date" name='date_complete' placeholder='Date Complete'>
         
-    </div>
+    </div> -->
 
     <div>
     

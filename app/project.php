@@ -12,7 +12,7 @@ class project extends Model
     public function notes()
     {
 
-        return $this->hasMany(Task::class);
+        return $this->hasMany(Note::class);
 
     }
 

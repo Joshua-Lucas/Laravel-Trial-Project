@@ -41,7 +41,6 @@ class PageController extends Controller
             'title' => ['required', 'min:3'],
             'supervisor' => ['required', 'min:3', ],
             'comments' => ['required','max:255'],
-            'date_complete'
         ]);
 
 
