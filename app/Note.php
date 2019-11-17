@@ -12,7 +12,7 @@ class Note extends Model
     public function projects()
     {
 
-        return $this->belongTo(Project::class);
+        return $this->belongsTo(Project::class);
 
     }
 }
