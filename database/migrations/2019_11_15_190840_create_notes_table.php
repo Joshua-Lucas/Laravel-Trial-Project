@@ -18,7 +18,7 @@ class CreateNotesTable extends Migration
             $table->unsignedInteger('project_id');
             $table->string('editor');
             $table->text('notes');
-            $table->timestamps();
+            $table->timestamps('updated_at');
         });
     }
 
