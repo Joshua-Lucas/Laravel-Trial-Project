@@ -12,19 +12,22 @@
         <h2>Supervisor:{{ $project->supervisor }}</h2>
         
         <h3>{{ $project->comments}}</h3>
+
+        <a href='/projects/{{$project -> id}}/edit'>Edit Project</a>
+
     </div>
 
+    @if ($project->notes->count())
+        <div>  
+            @foreach($project->notes as $note)
+                
+                <li>{{$note->updated_at}} by {{$note->editor}} "{{$note->notes}}" </li>
 
-
-    @foreach($project->notes as $note)
-
-        <div>
-        
-            <li>{{$note->updated_at}} by {{$note->editor}} "{{$note->notes}}" </li>
-        
+            @endforeach
         </div>
+    @endif
 
-    @endforeach
+<!-- FORM TO ADD NEW NOTE-->
 
     <div>
         <form method="POST" action="">
