@@ -16,6 +16,12 @@ class project extends Model
 
     }
 
+    public function addNote($note)
+    {
+
+       $this->notes()->create($note);
+
+    }
 
 
 

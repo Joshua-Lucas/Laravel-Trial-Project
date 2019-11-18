@@ -12,16 +12,13 @@ class PageNotesController extends Controller
 
     public function store(Project $project)
     {
-
        
-        $attributes =request()->validate ([
-            'projecrt_id' => $project->id,
+        $attributes = request()->validate ([
             'editor' => ['required', 'min:3'],
             'notes' => ['required','max:255'],
         ]);
 
-
-        Note:: create($attributes);
+        $project->addNote($attributes);
 
         return back();
 
