@@ -30,7 +30,7 @@
 <!-- FORM TO ADD NEW NOTE-->
 
     <div>
-        <form method="POST" action="">
+        <form method="POST" action="/projects/{{ $project->id}}/notes}}">
             @csrf
         
             <div>
