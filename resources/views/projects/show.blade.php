@@ -42,7 +42,7 @@
             <div>
         
                 <label for="notes">Note</label>
-                <textarea name="notes" ></textarea>
+                <textarea name="notes" required ></textarea>
 
             </div>
             <div>
