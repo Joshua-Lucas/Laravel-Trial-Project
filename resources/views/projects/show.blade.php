@@ -48,9 +48,10 @@
             <div>
                 <button type='submit'>Add Note</button>
             </div>
-        
-        
         </form>
+
+        @include ('errors')
+
     </div>
 
 
