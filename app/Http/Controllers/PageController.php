@@ -11,7 +11,7 @@ class PageController extends Controller
     Public function index() 
     {
         
-        $project = \App\project::all();
+        $project = Project::where('level_id', auth()->id()->get());
 
         return view('projects.index', ['project' => $project]);
 
