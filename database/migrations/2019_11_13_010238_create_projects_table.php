@@ -15,8 +15,6 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('owner_id');
-            $table->unsignedBigInteger('level_id');
             $table->string('title');
             $table->string('supervisor');
             $table->text('comments');
@@ -24,7 +22,6 @@ class CreateProjectsTable extends Migration
             $table->timestamps();
 
 
-            $table->foreign('owner_id')->references('id')->on('users');
         });
     }
 
