@@ -15,10 +15,6 @@
     </div>
 
     <div>
-        <input type="text" name='supervisor' placeholder='Supervisor Name' value='{{ old("supervisor") }}'>
-    </div>
-
-    <div>
     
         <textarea name="comments" placeholder='Project comments'>{{ old("comments") }}</textarea>
     

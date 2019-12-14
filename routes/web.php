@@ -17,7 +17,7 @@ Route::get('/', function () {
 });
 
 
-//  Route::resource('projects', 'PageController');
+// Route::resource('projects', 'PageController')->middleware('auth');
 
 Route::get('/projects', 'PageController@index');
 Route::get('/projects/{project}', 'PageController@show');

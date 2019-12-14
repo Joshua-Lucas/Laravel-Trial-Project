@@ -19,7 +19,7 @@ class CreateProjectsTable extends Migration
             $table->string('title');
             $table->string('supervisor');
             $table->text('comments');
-            $table->boolean('date_complete')->nullable;
+            $table->boolean('date_complete')->default(false);
             $table->timestamps();
 
 
