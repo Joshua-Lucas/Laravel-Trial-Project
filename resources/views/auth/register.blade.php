@@ -63,12 +63,7 @@
                             </div>
                         </div>
 
-                        <div>
-                            <div>
-                                <input  type="checkbox" id='admin' name='admin' {{$admin->true ? 'checked : ' '}}>
-                                admin
-                            </div>
-                        </div>
+                    
 
 
 
