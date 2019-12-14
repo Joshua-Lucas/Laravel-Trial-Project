@@ -33,11 +33,6 @@
         <form method="POST" action="/projects/{{ $project->id }}/notes">
             @csrf
         
-            <div>
-                <label for="editor">Editor</label>
-                <input type="text" name="editor" Placeholder='' required >
-            
-            </div>
 
             <div>
         
