@@ -16,6 +16,17 @@
 
                     You are logged in!
                 </div>
+
+
+                <div>
+                    <h1>Your Projects</h1>
+                    @foreach($project as $project)
+                        <a href="/projects/{{ $project->id }}">
+                            {{$project->title}}
+                        </a>
+                    @endforeach
+                </div>
+
             </div>
         </div>
     </div>
