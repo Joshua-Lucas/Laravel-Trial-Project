@@ -1,6 +1,13 @@
-html, body {
-    background-color: #fff;
-    color: #636b6f;
+html, body { 
+    background:   
+        #fff;
+     /* linear-gradient(
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.5)),
+      url('/img/constructionsite.jpg'),
+        no-repeat,
+        center; */
+    color: #000000;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
     height: 100vh;
