@@ -36,21 +36,21 @@
                     </ul> -->
 
                     <!-- Right Side Of Navbar -->
-                <div class="flex flex-col items-center">
+                <div class="flex flex-col items-center bg-blue-300 p-1">
                     <!-- Authentication Links -->
-                    <div class="flex flex-col items-center w-full">
-                            <div class="w-full">
+                    <div class="flex w-full mt-1">
+                            <div class="w-1/2 pl-1 ">
                                 <a class="" href="{{ url('/') }}">
                                     {{ config('app.name'), 'Smith_Construction' }}
                                 </a>
                             </div>
-                            <div class="flex w-full">
+                            <div class="flex w-1/2 justify-end pr-1 ">
                                 @guest
-                                    <div class="nav-item">
+                                    <div class="mx-6">
                                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                     </div>
                                     @if (Route::has('register'))
-                                        <div class="nav-item">
+                                        <div >
                                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                         </div>
                                     @endif
@@ -58,7 +58,7 @@
                             
 
                         
-                                <div>
+                                <div class="mx-6">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }} <span class="caret"></span>
                                     </a>
@@ -76,9 +76,9 @@
                                 </div>
                             </div>
                     </div>
-                    <div>
-                        <a href="/home">home</a>
-                        <a href="/create">new project log</a>
+                    <div class="flex flex-col items-center w-5/6 mt-1 ">
+                        <a class="bg-blue-500 w-full text-center rounded-sm " href="/home">home</a>
+                        <a href="/create">new project</a>
                         <a href="/projects">work logs</a>
                 
 
