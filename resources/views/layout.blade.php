@@ -2,8 +2,9 @@
 <html>
 <head>
     <title>@yield('title', 'Blank')</title>
+    <link rel="stylesheet" href="/css/app.css">
 </head>
-<body>
+<body class="bg-red-500" >
    
     <div>
         <ul>
