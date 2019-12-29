@@ -19,10 +19,10 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/css/app.css">
 </head>
-<body class=" bg-gray-100 ">
-    <div id="app">
+<body class=" bg-gray-100 text-gray-800 font-mono ">
+    <div class=" text-gray-800">
         <nav>
-            <div class="">
+            <div>
                 <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button> -->
@@ -36,12 +36,12 @@
                     </ul> -->
 
                     <!-- Right Side Of Navbar -->
-                <div class="flex flex-col items-center bg-blue-300 p-1">
+                <div class="flex flex-col items-center bg-yellow-500 p-1">
                     <!-- Authentication Links -->
                     <div class="flex w-full mt-1">
                             <div class="w-1/2 pl-1 ">
-                                <a class="" href="{{ url('/') }}">
-                                    {{ config('app.name'), 'Smith_Construction' }}
+                                <a class=" text-base" href="{{ url('/') }}">
+                                    {{ config('app.name'), 'Smith Construction' }}
                                 </a>
                             </div>
                             <div class="flex w-1/2 justify-end pr-1 ">
@@ -76,12 +76,10 @@
                                 </div>
                             </div>
                     </div>
-                    <div class="flex flex-col items-center w-5/6 mt-1 ">
-                        <a class="bg-blue-500 w-full text-center rounded-sm " href="/home">home</a>
-                        <a href="/create">new project</a>
-                        <a href="/projects">work logs</a>
-                
-
+                    <div class="flex flex-col items-center w-11/12 text-gray-100 mt-1 ">
+                        <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-md" href="/home">home</a>
+                        <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-md" href="/create">new project</a>
+                        <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-md" href="/projects">work logs</a>
                     </div>
 
                     @endguest
@@ -89,6 +87,9 @@
             </div>
         </nav>
 
+
+    </div>
+    <div>
         <main class="py-4">
             @yield('content')
         </main>
