@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/css/app.css">
 </head>
-<body class=" bg-gray-100 text-gray-800 font-mono ">
+<body class=" bg-gray-800 text-gray-800 font-mono flex flex-col ">
     <div class=" text-gray-800">
         <nav>
             <div>
@@ -39,12 +39,12 @@
                 <div class="flex flex-col items-center bg-yellow-500 p-1">
                     <!-- Authentication Links -->
                     <div class="flex w-full mt-1">
-                            <div class="w-1/2 pl-1 ">
-                                <a class=" text-base" href="{{ url('/') }}">
+                            <div class="w-1/2 pl-1">
+                                <a class=" text-base sm:text-lg md:text-xl" href="{{ url('/') }}">
                                     {{ config('app.name'), 'Smith Construction' }}
                                 </a>
                             </div>
-                            <div class="flex w-1/2 justify-end pr-1 ">
+                            <div class="flex w-1/2 justify-end pr-1 sm:text-lg md:text-xl ">
                                 @guest
                                     <div class="mx-6">
                                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -76,10 +76,10 @@
                                 </div>
                             </div>
                     </div>
-                    <div class="flex flex-col items-center w-11/12 text-gray-100 mt-1 ">
-                        <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-md" href="/home">home</a>
-                        <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-md" href="/create">new project</a>
-                        <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-md" href="/projects">work logs</a>
+                    <div class="flex flex-col items-center w-11/12 text-gray-100 mt-1 sm:flex-row sm:w-full">
+                        <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl" href="/home">home</a>
+                        <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl" href="/create">new project</a>
+                        <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl" href="/projects">work logs</a>
                     </div>
 
                     @endguest
