@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+<div class=" bg-gray-100 w-11/12 ">
+    <div>
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Dashboard</div>
@@ -18,8 +18,8 @@
                 </div>
 
 
-                <div>
-                    <h1>Your Projects</h1>
+                <div class="bg-green-400 text-center rounded-sm">
+                    <h1 class="bg-yellow-500">Your Projects</h1>
                     @foreach($project as $project)
                         <a href="/projects/{{ $project->id }}">
                             {{$project->title}}
@@ -27,14 +27,7 @@
                     @endforeach
                 </div>
 
-                <div>
-                    <h1>To do</h1>  
-                    
-                      
 
-
-                
-                </div>
 
 
             </div>
