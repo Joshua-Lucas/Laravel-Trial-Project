@@ -19,73 +19,71 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/css/app.css">
 </head>
-<body class=" bg-gray-800 text-gray-800 font-mono flex flex-col justify-center ">
-    <div class=" text-gray-800">
-        <nav>
-            <div>
-                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button> -->
+<body class=" bg-gray-800 text-gray-800 font-mono flex flex-col justify-center lg:flex-row  ">
+    <div class=" text-gray-800 lg:h-screen lg:w-1/4">
+
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+            <span class="navbar-toggler-icon"></span>
+        </button> -->
 
 
 
-                <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
-                    <!-- Left Side Of Navbar -->
-                    <!-- <ul class="navbar-nav mr-auto">
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+            <!-- Left Side Of Navbar -->
+            <!-- <ul class="navbar-nav mr-auto">
 
-                    </ul> -->
+            </ul> -->
 
-                    <!-- Right Side Of Navbar -->
-                <div class="flex flex-col items-center bg-yellow-500 p-1">
-                    <!-- Authentication Links -->
-                    <div class="flex w-full mt-1">
-                            <div class="w-1/2 pl-1">
-                                <a class=" text-base sm:text-lg md:text-xl" href="{{ url('/') }}">
-                                    {{ config('app.name'), 'Smith Construction' }}
-                                </a>
-                            </div>
-                            <div class="flex w-1/2 justify-end pr-1 sm:text-lg md:text-xl ">
-                                @guest
-                                    <div class="mx-6">
-                                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                    </div>
-                                    @if (Route::has('register'))
-                                        <div >
-                                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                        </div>
-                                    @endif
-                                @else
-                            
-
-                        
-                                <div class="mx-6">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }} <span class="caret"></span>
-                                    </a>
-                                </div>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </div>
+            <!-- Right Side Of Navbar -->
+        <div class="flex flex-col items-center bg-yellow-500 p-1 lg:h-screen ">
+            <!-- Authentication Links -->
+            <div class="flex w-full mt-1">
+                    <div class="w-1/2 pl-1">
+                        <a class=" text-base sm:text-lg md:text-xl" href="{{ url('/') }}">
+                            {{ config('app.name'), 'Smith Construction' }}
+                        </a>
                     </div>
-                    <div class="flex flex-col items-center w-11/12 text-gray-100 mt-1 sm:flex-row sm:w-full">
-                        <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl" href="/home">home</a>
-                        <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl" href="/create">new project</a>
-                        <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl" href="/projects">work logs</a>
-                    </div>
+                    <div class="flex w-1/2 justify-end pr-1 sm:text-lg md:text-xl ">
+                        @guest
+                            <div class="mx-6">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </div>
+                            @if (Route::has('register'))
+                                <div >
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </div>
+                            @endif
+                        @else
+                    
 
-                    @endguest
-                </div>
+                
+                        <div class="mx-6">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+                        </div>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </div>
             </div>
-        </nav>
+            <div class="flex flex-col items-center w-11/12 text-gray-100 mt-1 sm:flex-row sm:w-full">
+                <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl" href="/home">home</a>
+                <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl" href="/create">new project</a>
+                <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl" href="/projects">work logs</a>
+            </div>
+
+            @endguest
+        </div>
+
 
 
     </div>
