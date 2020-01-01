@@ -3,7 +3,7 @@
 @section('content')
 <div class="  flex flex-col justify-center mt-4 mx-2 ">
     <div class=" mb-4 flex  flex-col items-center">
-        <h1 class="text-5xl text-yellow-500">{{ Auth::user()->name }}'s  Dashboard</h1>
+        <h1 class="text-5xl text-center text-yellow-500">{{ Auth::user()->name }}'s  Dashboard</h1>
 
         <!-- <div class="card-body">
             @if (session('status'))
