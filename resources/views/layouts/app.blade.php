@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/css/app.css">
 </head>
-<body class=" bg-gray-800 text-gray-800 font-mono flex flex-col ">
+<body class=" bg-gray-800 text-gray-800 font-mono flex flex-col justify-center ">
     <div class=" text-gray-800">
         <nav>
             <div>
@@ -89,10 +89,8 @@
 
 
     </div>
-    <div>
-        <main class="py-4">
+    <div >
             @yield('content')
-        </main>
     </div>
 </body>
 </html>
