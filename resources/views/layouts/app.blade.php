@@ -80,8 +80,8 @@
             </div>
             <div class="flex flex-col items-center w-11/12 text-gray-100 mt-1 sm:flex-row sm:w-full lg:flex-col lg:mt-6 lg:w-full">
                 <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:rounded-none lg:bg-yellow-500 lg:text-gray-800 lg:font-semibold lg:uppercase lg:text-2xl" href="/home">home</a>
-                <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:rounded-none bg-yellow-500 lg:text-gray-800 lg:font-semibold lg:uppercase lg:text-2xl" href="/create">new project</a>
-                <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:rounded-none bg-yellow-500 lg:text-gray-800 lg:font-semibold lg:uppercase lg:text-2xl" href="/projects">work logs</a>
+                <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:rounded-none lg:bg-yellow-500 lg:text-gray-800 lg:font-semibold lg:uppercase lg:text-2xl" href="/create">new project</a>
+                <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:rounded-none lg:bg-yellow-500 lg:text-gray-800 lg:font-semibold lg:uppercase lg:text-2xl" href="/projects">work logs</a>
             </div>
 
             @endguest
