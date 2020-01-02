@@ -37,15 +37,15 @@
             <!-- Right Side Of Navbar -->
         <div class="flex flex-col items-center bg-yellow-500 p-1 lg:h-screen ">
             <!-- Authentication Links -->
-            <div class="flex w-full mt-1">
-                    <div class="w-1/2 pl-1">
-                        <a class=" text-base sm:text-lg md:text-xl" href="{{ url('/') }}">
+            <div class="flex w-full mt-1 lg:flex-col ">
+                    <div class="w-1/2 pl-1 lg:w-full lg:justify-center lg:text-center lg:mb-6">
+                        <a class=" text-base sm:text-lg md:text-xl lg:text-2xl" href="{{ url('/') }}">
                             {{ config('app.name'), 'Smith Construction' }}
                         </a>
                     </div>
-                    <div class="flex w-1/2 justify-end pr-1 sm:text-lg md:text-xl ">
+                    <div class="flex w-1/2 justify-end pr-1 sm:text-lg md:text-xl lg:w-full lg:flex-col lg:items-center ">
                         @guest
-                            <div class="mx-6">
+                            <div class="mx-6 lg:items-center">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </div>
                             @if (Route::has('register'))
@@ -55,15 +55,13 @@
                             @endif
                         @else
                     
-
-                
                         <div class="mx-6">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
                         </div>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}"
+                        <div aria-labelledby="navbarDropdown">
+                            <a class="lg:text-sm lg:italic" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
