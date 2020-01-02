@@ -35,14 +35,15 @@
             </ul> -->
 
             <!-- Right Side Of Navbar -->
-        <div class="flex flex-col items-center bg-yellow-500 p-1 lg:h-screen ">
+        <div class="flex flex-col items-center bg-yellow-500 p-1 lg:h-screen lg:p-0 ">
             <!-- Authentication Links -->
             <div class="flex w-full mt-1 lg:flex-col ">
-                    <div class="w-1/2 pl-1 lg:w-full lg:justify-center lg:text-center lg:mb-6">
-                        <a class=" text-base sm:text-lg md:text-xl lg:text-2xl" href="{{ url('/') }}">
+                    <div class="w-1/2 pl-1 lg:w-full lg:justify-center lg:text-center lg:mb-3">
+                        <a class=" text-base sm:text-lg md:text-xl lg:text-3xl lg:font-extrabold" href="{{ url('/') }}">
                             {{ config('app.name'), 'Smith Construction' }}
                         </a>
                     </div>
+                
                     <div class="flex w-1/2 justify-end pr-1 sm:text-lg md:text-xl lg:w-full lg:flex-col lg:items-center ">
                         @guest
                             <div class="mx-6 lg:items-center">
@@ -54,7 +55,11 @@
                                 </div>
                             @endif
                         @else
-                    
+
+                        <a href="{{ route('login') }}">
+                            <img  class="  lg:w-32 lg:rounded-full lg:border-solid lg:border-8 border-gray-900"src="img/icon-user.svg" alt="Default User Img">
+                        </a>
+                        
                         <div class="mx-6">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
@@ -73,10 +78,10 @@
                         </div>
                     </div>
             </div>
-            <div class="flex flex-col items-center w-11/12 text-gray-100 mt-1 sm:flex-row sm:w-full">
-                <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl" href="/home">home</a>
-                <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl" href="/create">new project</a>
-                <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl" href="/projects">work logs</a>
+            <div class="flex flex-col items-center w-11/12 text-gray-100 mt-1 sm:flex-row sm:w-full lg:flex-col lg:mt-6 lg:w-full">
+                <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:rounded-none lg:bg-yellow-500 lg:text-gray-800 lg:font-semibold lg:uppercase lg:text-2xl" href="/home">home</a>
+                <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:rounded-none bg-yellow-500 lg:text-gray-800 lg:font-semibold lg:uppercase lg:text-2xl" href="/create">new project</a>
+                <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:rounded-none bg-yellow-500 lg:text-gray-800 lg:font-semibold lg:uppercase lg:text-2xl" href="/projects">work logs</a>
             </div>
 
             @endguest
