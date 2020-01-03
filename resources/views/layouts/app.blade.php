@@ -19,8 +19,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/css/app.css">
 </head>
-<body class=" bg-gray-800 text-gray-800 font-mono flex flex-col justify-center lg:flex-row  ">
-    <div class=" text-gray-800 lg:h-screen lg:w-1/4">
+<body class=" bg-gray-800 text-gray-800 font-mono flex flex-col justify-center lg:flex-row lg:justify-start ">
+    <div class=" text-gray-800 lg:h-screen lg:w-1/4 xl:w-1/5">
 
         <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
@@ -78,10 +78,21 @@
                         </div>
                     </div>
             </div>
-            <div class="flex flex-col items-center w-11/12 text-gray-100 mt-1 sm:flex-row sm:w-full lg:flex-col lg:mt-6 lg:w-full">
-                <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:rounded-none lg:bg-yellow-500 lg:text-gray-800 lg:font-semibold lg:uppercase lg:text-2xl" href="/home">home</a>
-                <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:rounded-none lg:bg-yellow-500 lg:text-gray-800 lg:font-semibold lg:uppercase lg:text-2xl" href="/create">new project</a>
-                <a class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:rounded-none lg:bg-yellow-500 lg:text-gray-800 lg:font-semibold lg:uppercase lg:text-2xl" href="/projects">work logs</a>
+            <div class="flex flex-col items-center w-11/12 text-gray-100 mt-1 sm:flex-row sm:w-full lg:flex-col lg:mt-6 lg:w-full ">
+               
+               <div class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:bg-yellow-500 lg:w-full lg:flex lg:justify-end lg:px-6">
+                    <img src="/img/icon-home.svg" alt="home icon" class="invisible lg:visible lg:pr-2 ">
+                    <a class="lg:text-gray-800 lg:font-semibold lg:uppercase lg:text-2xl" href="/home">home</a>
+                </div>
+                <div class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:bg-yellow-500 lg:w-full lg:flex lg:justify-end lg:px-6" >
+                    <img src="/img/icon-plus-circle.svg" alt="home icon" class="invisible lg:visible lg:pr-2 ">
+                    <a class=" lg:text-gray-800 lg:font-semibold lg:uppercase lg:text-2xl" href="/create">new project</a>
+                </div>
+                <div class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:bg-yellow-500 lg:w-full lg:flex lg:justify-end lg:px-6" >
+                    <img src="/img/icon-grid.svg" alt="home icon" class="invisible lg:visible lg:pr-2 ">
+                    <a class="lg:bg-yellow-500 lg:text-gray-800 lg:font-semibold 
+                    lg:uppercase lg:text-2xl" href="/projects">work logs</a>
+                </div>
             </div>
 
             @endguest
