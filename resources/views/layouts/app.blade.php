@@ -101,8 +101,8 @@
 
 
     </div>
-    <div >
-            @yield('content')
-    </div>
+    
+     @yield('content')
+    
 </body>
 </html>
