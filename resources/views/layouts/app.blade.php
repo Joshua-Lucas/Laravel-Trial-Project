@@ -80,18 +80,18 @@
             </div>
             <div class="flex flex-col items-center w-11/12 text-gray-100 mt-1 sm:flex-row sm:w-full lg:flex-col lg:mt-6 lg:w-full ">
                
-               <div class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:bg-yellow-500 lg:w-full lg:flex lg:justify-end lg:px-6">
-                    <img src="/img/icon-home.svg" alt="home icon" class="invisible lg:visible lg:pr-2 ">
-                    <a class="lg:text-gray-800 lg:font-semibold lg:uppercase lg:text-2xl" href="/home">home</a>
+               <div class="flex justify-center m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:bg-yellow-500 lg:w-full lg:flex lg:justify-end lg:px-6">
+                    <img src="/img/icon-home.svg" alt="home icon" class="bg-gray-100 rounded-lg lg:bg-yellow-500 lg:pr-2 ">
+                    <a class=" pl-2 uppercase lg:p-0  lg:text-gray-800 lg:font-semibold lg:text-2xl" href="/home">home</a>
                 </div>
-                <div class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:bg-yellow-500 lg:w-full lg:flex lg:justify-end lg:px-6" >
-                    <img src="/img/icon-plus-circle.svg" alt="home icon" class="invisible lg:visible lg:pr-2 ">
-                    <a class=" lg:text-gray-800 lg:font-semibold lg:uppercase lg:text-2xl" href="/create">new project</a>
+                <div class="flex justify-center m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:bg-yellow-500 lg:w-full lg:flex lg:justify-end lg:px-6" >
+                    <img src="/img/icon-plus-circle.svg" alt="home icon" class="bg-gray-100 rounded-lg lg:bg-yellow-500 lg:pr-2">
+                    <a class=" pl-2 uppercase lg:p-0 lg:text-gray-800 lg:font-semibold lg:text-2xl" href="/create">new project</a>
                 </div>
-                <div class="m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:bg-yellow-500 lg:w-full lg:flex lg:justify-end lg:px-6" >
-                    <img src="/img/icon-grid.svg" alt="home icon" class="invisible lg:visible lg:pr-2 ">
-                    <a class="lg:bg-yellow-500 lg:text-gray-800 lg:font-semibold 
-                    lg:uppercase lg:text-2xl" href="/projects">work logs</a>
+                <div class="flex justify-center m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:bg-yellow-500 lg:w-full lg:flex lg:justify-end lg:px-6" >
+                    <img src="/img/icon-grid.svg" alt="home icon" class="bg-gray-100 rounded-lg lg:bg-yellow-500 lg:pr-2 ">
+                    <a class=" pl-2 uppercase lg:bg-yellow-500 lg:text-gray-800 lg:font-semibold 
+                     lg:text-2xl" href="/projects">work logs</a>
                 </div>
             </div>
 
