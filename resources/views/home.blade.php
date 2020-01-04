@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="  flex flex-col justify-center mt-4 mx-2 ">
-    <div class=" mb-4 flex  flex-col items-center">
+<div class="  flex flex-col justify-center mt-4 mx-2 lg:w-3/4 xl:w-4/5 lg:justify-start">
+    <div class=" mb-4 flex  flex-col items-center ">
         <h1 class="text-5xl text-center text-yellow-500">{{ Auth::user()->name }}'s  Dashboard</h1>
 
         <!-- <div class="card-body">
@@ -16,7 +16,7 @@
         </div> -->
     </div>
 
-    <div class=" text-center rounded-sm flex flex-col md:mx-6 lg:w-1/2">
+    <div class=" text-center rounded-sm flex flex-col md:mx-6 lg:w-5/6 lg:self-center">
         <h1 class="bg-yellow-500  mx-1 text-2xl font-extrabold ">Your Projects</h1>
         <div class=" flex flex-col mt-2 sm:flex-row sm:justify-center" >
             @foreach($project as $project)
