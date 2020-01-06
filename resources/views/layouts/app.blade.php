@@ -44,7 +44,7 @@
                         </a>
                     </div>
                 
-                    <div class="flex w-1/2 justify-end pr-1 sm:text-lg md:text-xl lg:w-full lg:flex-col lg:items-center ">
+                    <div class="flex w-1/2 justify-end pr-1 sm:text-lg md:text-xl lg:w-full lg:flex-col lg:pr-0 lg:items-center ">
                         @guest
                             <div class="mx-6 lg:items-center">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -56,16 +56,16 @@
                             @endif
                         @else
 
-                        <a href="{{ route('login') }}">
-                            <img  class="  lg:w-32 lg:rounded-full lg:border-solid lg:border-8 border-gray-900"src="img/icon-user.svg" alt="Default User Img">
+                        <a class='mr-3 lg:mr-0 self-center'href="{{ route('login') }}">
+                            <img  class="h-5 lg:h-32 lg:w-32 lg:rounded-full lg:border-solid lg:border-8 border-gray-900"src="img/icon-user.svg" alt="Default User Img">
                         </a>
                         
-                        <div class="mx-6">
+                        <div class="mr-4 lg:mr-0 self-center">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
                         </div>
-                        <div aria-labelledby="navbarDropdown">
+                        <div class="self-center">
                             <a class="lg:text-sm lg:italic" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
