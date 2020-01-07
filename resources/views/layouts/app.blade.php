@@ -21,20 +21,6 @@
 </head>
 <body class=" bg-gray-800 text-gray-800 font-mono flex flex-col justify-center lg:flex-row lg:justify-start ">
     <div class=" text-gray-800 lg:h-screen lg:w-1/4 xl:w-1/5">
-
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-            <span class="navbar-toggler-icon"></span>
-        </button> -->
-
-
-
-        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
-            <!-- Left Side Of Navbar -->
-            <!-- <ul class="navbar-nav mr-auto">
-
-            </ul> -->
-
-            <!-- Right Side Of Navbar -->
         <div class="flex flex-col items-center bg-yellow-500 p-1 lg:h-screen lg:p-0 ">
             <!-- Authentication Links -->
             <div class="flex w-full mt-1 lg:flex-col ">
@@ -97,9 +83,6 @@
 
             @endguest
         </div>
-
-
-
     </div>
     
      @yield('content')
