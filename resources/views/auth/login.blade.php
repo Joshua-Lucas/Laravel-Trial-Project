@@ -1,9 +1,9 @@
 @extends('layouts.loginlayout')
 
 @section('content')
-<div class="w-3/4 h-64 bg-yellow-500 mt-3 self-center">
-    <div class="card-header">
-        <a class="" href="{{ url('/') }}">
+<div class="w-3/4 h-64 py-32 bg-yellow-500 self-center flex flex-col justify-center items-center">
+    <div class="items-start">
+        <a class="text-xl" href="{{ url('/') }}">
             {{ config('app.name'), 'Three Amigos' }}
          </a>
         <h2>{{ __('Login') }}</h2>
