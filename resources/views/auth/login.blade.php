@@ -10,7 +10,7 @@
         </a>
     </div>
 
-    <div class="flex flex-col items-center w-10/12">
+    <div class="flex flex-col items-center w-9/12 sm:w-3/5 lg:w-2/5">
         <div class="w-full">
             <form method="POST" action="{{ route('login') }}">
                 @csrf
@@ -29,8 +29,7 @@
                 </div>
 
                 <div class="mb-3">
-
-
+                
                     <div class="col-md-6">
                         <input id="password" type="password" placeholder="Password" class="w-full bg-transparent border-b-2  border-white rounded-sm placeholder-white @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
@@ -41,39 +40,40 @@
                         @enderror
                     </div>
                 </div>
-            </div>
-            <!-- <div class="">
-                <div class="">
+            
+                <!-- <div class="">
                     <div class="">
-                        <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                        <div class="">
+                            <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                        <label class="" for="remember">
-                            {{ __('Remember Me') }}
-                        </label>
+                            <label class="" for="remember">
+                                {{ __('Remember Me') }}
+                            </label>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="w-full">
+                    <div class="flex flex-col items-center w-full">
+                        <button type="submit" class="w-full rounded bg-gray-200 text-gray-900 shadow-md">
+                            {{ __('Login') }}
+                        </button>
+                        <!-- <div class="">
+                            <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                            <label class="" for="remember">
+                                {{ __('Remember Me') }}
+                            </label>
+                        </div> -->
+                        @if (Route::has('password.request'))
+                            <a class=" text-xs italic mt-2" href="{{ route('password.request') }}">
+                                {{ __('Forgot Your Password?') }}
+                            </a>
+                        @endif
                     </div>
                 </div>
-            </div> -->
-
-            <div class="w-full">
-                <div class="flex flex-col items-center w-full">
-                    <button type="submit" class="w-full rounded bg-gray-200 text-gray-900 shadow-md">
-                        {{ __('Login') }}
-                    </button>
-                    <!-- <div class="">
-                        <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                        <label class="" for="remember">
-                            {{ __('Remember Me') }}
-                        </label>
-                    </div> -->
-                    @if (Route::has('password.request'))
-                        <a class=" text-xs italic mt-2" href="{{ route('password.request') }}">
-                            {{ __('Forgot Your Password?') }}
-                        </a>
-                    @endif
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>    
     </div>
 
 </div>
