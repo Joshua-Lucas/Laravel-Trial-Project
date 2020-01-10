@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/css/app.css">
 </head>
-<body class=' min-h-screen bg-scroll bg-cover  text-gray-800 font-mono flex justify-center '  style="background-image: url('/img/wood.jpg')">
+<body class=' min-h-screen bg-scroll bg-cover  text-gray-800 font-mono flex justify-center '  style="background-image: url('/img/floor1.jpg')">
     @yield('content')
 </body>
 </html>
