@@ -29,8 +29,7 @@
                 </div>
 
                 <div class="mb-3">
-
-
+                
                     <div class="col-md-6">
                         <input id="password" type="password" placeholder="Password" class="w-full bg-transparent border-b-2  border-white rounded-sm placeholder-white @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
