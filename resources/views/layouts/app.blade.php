@@ -19,14 +19,14 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/css/app.css">
 </head>
-<body class=" bg-gray-800 text-gray-800 font-mono flex flex-col justify-center lg:flex-row lg:justify-start ">
-    <div class=" text-gray-800 lg:h-screen lg:w-1/4 xl:w-1/5">
-        <div class="flex flex-col items-center bg-yellow-500 p-1 lg:h-screen lg:p-0 ">
+<body class="bg-linen text-storm font-mono flex flex-col justify-center lg:flex-row lg:justify-start lg:bg-local" style="background-image: url('/img/unfinished.jpg')" >
+    <div class=" text-linen lg:h-screen lg:w-1/4 xl:w-1/5">
+        <div class="flex flex-col items-center bg-forest p-1 lg:h-screen lg:p-0 ">
             <!-- Authentication Links -->
             <div class="flex w-full mt-1 lg:flex-col ">
                     <div class="w-1/2 pl-1 lg:w-full lg:justify-center lg:text-center lg:mb-3">
                         <a class=" text-base sm:text-lg md:text-xl lg:text-3xl lg:font-extrabold" href="{{ url('/') }}">
-                            {{ config('app.name'), 'Smith Construction' }}
+                            <img class=" w-4/5  lg:m-auto"src="/img/3amigoslogo.png" alt="Logo">   
                         </a>
                     </div>
                 
@@ -43,7 +43,7 @@
                         @else
 
                         <a class='mr-3 lg:mr-0 self-center'href="{{ route('login') }}">
-                            <img  class="h-5 lg:h-32 lg:w-32 lg:rounded-full lg:border-solid lg:border-8 border-gray-900"src="img/icon-user.svg" alt="Default User Img">
+                            <img  class="h-5 lg:h-32 lg:w-32 lg:rounded-full lg:border-solid lg:border-8 lg:border-sky"src="img/icon-user.svg" alt="Default User Img">
                         </a>
                         
                         <div class="mr-4 lg:mr-0 self-center">
@@ -51,7 +51,7 @@
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
                         </div>
-                        <div class="self-center">
+                        <div class=" lg:invisible self-center">
                             <a class="lg:text-sm lg:italic" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
@@ -64,23 +64,33 @@
                         </div>
                     </div>
             </div>
-            <div class="flex flex-col items-center w-11/12 text-gray-100 mt-1 sm:flex-row sm:w-full lg:flex-col lg:mt-6 lg:w-full ">
+            <div class="flex flex-col items-center w-11/12 text-storm mt-1 sm:flex-row sm:w-full lg:flex-col lg:mt-6 lg:w-full ">
                
-               <div class="flex justify-center m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:bg-yellow-500 lg:w-full lg:flex lg:justify-end lg:px-6">
-                    <img src="/img/icon-home.svg" alt="home icon" class="bg-gray-100 rounded-lg lg:bg-yellow-500 lg:pr-2 ">
-                    <a class=" pl-2 uppercase lg:p-0  lg:text-gray-800 lg:font-semibold lg:text-2xl" href="/home">home</a>
+               <div class="flex justify-center m-1 p-1 bg-sky w-full text-center rounded-sm shadow-xl  lg:w-full lg:flex lg:justify-end lg:px-6">
+                    <img src="/img/icon-home.svg" alt="home icon" class="bg-transparent rounded-lg lg:pr-2 ">
+                    <a class=" pl-2 uppercase lg:p-0  lg:font-semibold lg:text-2xl" href="/home">home</a>
                 </div>
-                <div class="flex justify-center m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:bg-yellow-500 lg:w-full lg:flex lg:justify-end lg:px-6" >
-                    <img src="/img/icon-plus-circle.svg" alt="home icon" class="bg-gray-100 rounded-lg lg:bg-yellow-500 lg:pr-2">
-                    <a class=" pl-2 uppercase lg:p-0 lg:text-gray-800 lg:font-semibold lg:text-2xl" href="/create">new project</a>
+                <div class="flex justify-center m-1 p-1 bg-sky w-full text-center rounded-sm shadow-xl  lg:w-full lg:flex lg:justify-end lg:px-6" >
+                    <img src="/img/icon-plus-circle.svg" alt="home icon" class="bg-transparent rounded-lg  lg:pr-2">
+                    <a class=" pl-2 uppercase lg:p-0  lg:font-semibold lg:text-2xl" href="/create">new project</a>
                 </div>
-                <div class="flex justify-center m-1 p-1 bg-gray-800 w-full text-center rounded-sm shadow-xl lg:bg-yellow-500 lg:w-full lg:flex lg:justify-end lg:px-6" >
-                    <img src="/img/icon-grid.svg" alt="home icon" class="bg-gray-100 rounded-lg lg:bg-yellow-500 lg:pr-2 ">
-                    <a class=" pl-2 uppercase lg:bg-yellow-500 lg:text-gray-800 lg:font-semibold 
+                <div class="flex justify-center m-1 p-1 bg-sky w-full text-center rounded-sm shadow-xl  lg:w-full lg:flex lg:justify-end lg:px-6" >
+                    <img src="/img/icon-grid.svg" alt="home icon" class="bg-transparent rounded-lg  lg:pr-2 ">
+                    <a class=" pl-2 uppercase lg:font-semibold 
                      lg:text-2xl" href="/projects">work logs</a>
                 </div>
             </div>
+            <div class="hidden lg:flex lg:justify-center lg:w-full lg:mt-auto lg:mb-2">
+                            <a class="lg:w-3/4 lg:text-center lg:text-sm lg:italic " href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
 
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
             @endguest
         </div>
     </div>

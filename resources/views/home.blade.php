@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="  flex flex-col justify-center mt-4 mx-2 lg:w-3/4 xl:w-4/5 lg:justify-start">
+<div class="  flex flex-col justify-center mt-4 mx-2 lg:w-3/4 xl:w-4/5 lg:justify-start lg:shadow-xl">
     <div class=" mb-4 flex  flex-col items-center ">
         <h1 class="text-5xl text-center text-yellow-500">{{ Auth::user()->name }}'s  Dashboard</h1>
 
