@@ -7,6 +7,13 @@
             <img class=" w-4/5  m-auto"src="/img/3amigoslogo.png" alt="Logo">
         </a>
     </div>
+   
+    <div class="w-3/6 flex justify-between mb-3 text-center rounded bg-linen text-storm opacity-50 sm: 2/6 md:w-1/5 ">
+        <a href="/login" class="{{Request::is('login') ? 'login-toggol' : ''  }} flex-1 self-center mr-1">Login</a>
+        <a href="/register" class="{{Request::is('register') ? 'login-toggol' : ''  }} flex-1 self-center pr-1 ">Register</a>
+    </div>
+
+
     <div class="flex flex-col items-center w-9/12 sm:w-3/5 lg:w-2/5">
         <div class="w-full"> 
             <form method="POST" action="{{ route('register') }}">

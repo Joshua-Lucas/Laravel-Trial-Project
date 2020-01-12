@@ -634,6 +634,15 @@ video {
   }
 }
 
+.login-toggol {
+  background-color: #565c5e;
+  border-radius: 0.25rem;
+  color: #fff;
+  padding: 0.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
