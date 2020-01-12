@@ -29,7 +29,7 @@
 
                     <div class="mb-3">
                         <input id="email" type="email" class="w-full bg-transparent border-b-2 border-white rounded-sm shadow-md  placeholder-white @error('email') is-invalid @enderror" placeholder="Email" name="email" value="{{ old('email') }}" required autocomplete="email">
-<!-- Pick up refactiroing/styling here -->
+
                         @error('email')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -38,11 +38,10 @@
                     </div>
                 </div>
 
-                <div class="form-group row">
-                    <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                <div class="mb-4">
 
-                    <div class="col-md-6">
-                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                    <div class="mb-3">
+                        <input id="password" type="password" class="w-full bg-transparent border-b-2 border-white rounded-sm shadow-md  placeholder-white @error('password') is-invalid @enderror" placeholder="Password" name="password" required autocomplete="new-password">
 
                         @error('password')
                             <span class="invalid-feedback" role="alert">
@@ -52,11 +51,10 @@
                     </div>
                 </div>
 
-                <div class="form-group row">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                <div class="mb-4">
 
-                    <div class="col-md-6">
-                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                    <div class="mb-3">
+                        <input id="password-confirm" type="password" class="w-full bg-transparent border-b-2 border-white rounded-sm shadow-md  placeholder-white" placeholder="Confirm Password"name="password_confirmation" required autocomplete="new-password">
                     </div>
                 </div>
 
@@ -64,9 +62,9 @@
 
 
 
-                <div class="form-group row mb-0">
-                    <div class="col-md-6 offset-md-4">
-                        <button type="submit" class="btn btn-primary">
+                <div class="w-full">
+                    <div class="flex flex-col items-center w-full">
+                        <button type="submit" class="w-full rounded bg-gray-200 text-gray-900 shadow-md">
                             {{ __('Register') }}
                         </button>
                     </div>
