@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/css/app.css">
 </head>
-<body class="bg-linen text-storm font-mono flex flex-col justify-center lg:flex-row lg:justify-start lg:bg-local" style="background-image: url('/img/unfinished.jpg')" >
+<body class="bg-linen text-storm font-mono flex flex-col justify-center lg:flex-row lg:justify-start lg:bg-local"  >
     <div class=" text-linen lg:h-screen lg:w-1/4 xl:w-1/5">
         <div class="flex flex-col items-center bg-forest p-1 lg:h-screen lg:p-0 ">
             <!-- Authentication Links -->
@@ -43,7 +43,7 @@
                         @else
 
                         <a class='mr-3 lg:mr-0 self-center'href="{{ route('login') }}">
-                            <img  class="h-5 lg:h-32 lg:w-32 lg:rounded-full lg:border-solid lg:border-8 lg:border-sky"src="img/icon-user.svg" alt="Default User Img">
+                            <img  class="h-6 lg:h-32 lg:w-32 lg:rounded-full lg:border-solid lg:border-8 lg:border-sky"src="img/male_avatar.svg" alt="Default User Img">
                         </a>
                         
                         <div class="mr-4 lg:mr-0 self-center">
