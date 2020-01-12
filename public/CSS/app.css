@@ -627,6 +627,13 @@ video {
   }
 }
 
+@media (min-width: 1024px) {
+  .current-page {
+    background-color: #565c5e;
+    color: #dfdbd8;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
