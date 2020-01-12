@@ -16,17 +16,17 @@
         </div> -->
     </div>
 
-    <div class=" bg-forest flex flex-col text-center  text-linen rounded-lg shadow-xl md:mx-6 lg:w-5/6 lg:self-center">
+    <div class=" bg-forest flex flex-col flex-wrap text-center  text-linen rounded-lg shadow-xl md:mx-6 lg:w-5/6 lg:px-3 lg:self-center">
         <h1 class="  mt-3 mx-1 text-2xl font-extrabold uppercase ">Your Projects</h1>
-        <div class=" flex flex-col mt-2 mb-3 sm:flex-row sm:justify-center" >
+        <div class=" flex flex-col flex-wrap mt-2 mb-3 sm:flex-row sm:justify-center" >
             @foreach($project as $project)
-                <a href="/projects/{{ $project->id }}" class="m-2 p-4 bg-sky flex flex-col items-center text-center rounded-sm shadow-xl ">
+                <a href="/projects/{{ $project->id }}" class="m-2 p-4 bg-sky flex flex-col flex-1 items-center text-center rounded-sm shadow-xl ">
                     
-                    <h2 class=" m-2 p-1 bg-storm w-full text-lg text-center flex-grow rounded-lg shadow-xl lg:break-words " >
+                    <h2 class=" m-2 p-3 bg-storm w-full text-lg text-center  rounded-lg shadow-xl lg:break-words " >
                         {{$project->title}}
                     </h2>
 
-                    <p class=" text-leather text-base italic "> {{$project->comments}}</p>
+                    <p class="text-leather text-base italic "> {{$project->comments}}</p>
                 </a>
             @endforeach
         </div>

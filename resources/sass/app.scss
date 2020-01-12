@@ -3,4 +3,11 @@
 
 @tailwind components;
 
+    @screen lg{
+
+        .current-page {
+        @apply bg-storm text-linen;
+    }}
+
+
 @tailwind utilities;
