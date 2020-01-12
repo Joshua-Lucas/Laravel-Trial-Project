@@ -9,5 +9,9 @@
         @apply bg-storm text-linen;
     }}
 
+    .login-toggol{
+        @apply bg-storm rounded text-white p-1 py-2;
+    }
+
 
 @tailwind utilities;
