@@ -18,11 +18,7 @@ class PageController extends Controller
 
     Public function index() 
     {
-<<<<<<< HEAD
-        
-=======
-       
->>>>>>> 8124b25120ddce004325095078d0feabb7387bc5
+
         $project = Project::all();
 
         return view('projects.index', ['project' => $project]);
