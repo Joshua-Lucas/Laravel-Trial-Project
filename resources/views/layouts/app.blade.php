@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Smith_Construction') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -17,64 +17,85 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="/css/app.css">
 </head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
+<body class="bg-linen text-storm font-mono flex flex-col justify-center lg:flex-row lg:justify-start lg:bg-local"  >
+    <div class=" text-linen lg:h-screen lg:w-1/4 xl:w-1/5">
+        <div class="flex flex-col items-center bg-forest p-1 lg:h-screen lg:p-0 ">
+            <!-- Authentication Links -->
+            <div class="flex w-full mt-1 lg:flex-col ">
+                    <div class="w-1/2 pl-1 lg:w-full lg:justify-center lg:text-center lg:mb-3">
+                        <a class=" text-base sm:text-lg md:text-xl lg:text-3xl lg:font-extrabold" href="{{ url('/') }}">
+                            <img class=" w-4/5  lg:m-auto"src="/img/3amigoslogo.png" alt="Logo">   
+                        </a>
+                    </div>
+                
+                    <div class="flex w-1/2 justify-end pr-1 sm:text-lg md:text-xl lg:w-full lg:flex-col lg:pr-0 lg:items-center ">
                         @guest
-                            <li class="nav-item">
+                            <div class="mx-6 lg:items-center">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
+                            </div>
                             @if (Route::has('register'))
-                                <li class="nav-item">
+                                <div >
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
+                                </div>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                        <a class='mr-3 lg:mr-0 self-center'href="{{ route('login') }}">
+                            <img  class="h-6 lg:h-32 lg:w-32 lg:rounded-full lg:border-solid lg:border-8 lg:border-sky"src="img/male_avatar.svg" alt="Default User Img">
+                        </a>
+                        
+                        <div class="mr-4 lg:mr-0 self-center">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+                        </div>
+                        <div class=" lg:invisible self-center">
+                            <a class="lg:text-sm lg:italic" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </div>
+            </div>
+            <div class="flex flex-col items-center w-11/12 text-storm mt-1 sm:flex-row sm:w-full lg:flex-col lg:mt-6 lg:w-full ">
+               
+               <div class="{{Request::is('home') ? 'current-page' : ''  }} flex justify-center m-1 p-1 bg-sky w-full text-center rounded-sm shadow-xl  lg:w-full lg:flex lg:justify-end lg:px-6 ">
+                    <img src="/img/icon-home.svg" alt="home icon" class="bg-transparent rounded-lg lg:pr-2 ">
+                    <a class=" pl-2 uppercase lg:p-0  lg:font-semibold lg:text-2xl" href="/home">home</a>
+                </div>
+                <div class="{{Request::is('create*') ? 'current-page' : ''  }} flex justify-center m-1 p-1 bg-sky w-full text-center rounded-sm shadow-xl  lg:w-full lg:flex lg:justify-end lg:px-6" >
+                    <img src="/img/icon-plus-circle.svg" alt="home icon" class="bg-transparent rounded-lg  lg:pr-2">
+                    <a class=" pl-2 uppercase lg:p-0  lg:font-semibold lg:text-2xl" href="/create">new project</a>
+                </div>
+                <div class="{{Request::is('projects') ? 'current-page' : ''  }} flex justify-center m-1 p-1 bg-sky w-full text-center rounded-sm shadow-xl  lg:w-full lg:flex lg:justify-end lg:px-6" >
+                    <img src="/img/icon-grid.svg" alt="home icon" class="bg-transparent rounded-lg  lg:pr-2 ">
+                    <a class=" pl-2 uppercase lg:font-semibold 
+                     lg:text-2xl" href="/projects">work logs</a>
                 </div>
             </div>
-        </nav>
+            <div class="hidden lg:flex lg:justify-center lg:w-full lg:mt-auto lg:mb-2">
+                            <a class="lg:w-3/4 lg:text-center lg:text-sm lg:italic " href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+            @endguest
+        </div>
     </div>
+    
+     @yield('content')
+    
 </body>
 </html>

@@ -13,11 +13,12 @@
 
 Route::get('/', function () {
 
-    return view('welcome');
+
+    return view('auth/login');
 });
 
 
-//  Route::resource('projects', 'PageController');
+// Route::resource('projects', 'PageController')->middleware('auth');
 
 Route::get('/projects', 'PageController@index');
 Route::get('/projects/{project}', 'PageController@show');

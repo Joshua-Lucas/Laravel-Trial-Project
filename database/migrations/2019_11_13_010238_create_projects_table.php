@@ -15,10 +15,14 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->bigIncrements('id');
+<<<<<<< HEAD
+=======
+            $table->unsignedBigInteger('owner_id');
+>>>>>>> 8124b25120ddce004325095078d0feabb7387bc5
             $table->string('title');
             $table->string('supervisor');
             $table->text('comments');
-            // $table->date('date_complete');
+            $table->boolean('date_complete')->default(false);
             $table->timestamps();
 
 

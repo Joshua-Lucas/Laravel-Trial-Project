@@ -8,9 +8,21 @@ use App\project;
 class PageController extends Controller
 {
     
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+ 
+
+
     Public function index() 
     {
+<<<<<<< HEAD
         
+=======
+       
+>>>>>>> 8124b25120ddce004325095078d0feabb7387bc5
         $project = Project::all();
 
         return view('projects.index', ['project' => $project]);
@@ -29,6 +41,7 @@ class PageController extends Controller
     Public function create()
     {
 
+        
         return view('/projects/create');
 
     }
@@ -39,14 +52,17 @@ class PageController extends Controller
 
         $attributes =request()->validate ([
             'title' => ['required', 'min:3'],
-            'supervisor' => ['required', 'min:3', ],
             'comments' => ['required','max:255'],
         ]);
 
+        $attributes ['supervisor'] = auth()->user()->name;    
+        $attributes['owner_id'] = auth()->id();
 
-        Project:: create($attributes);
 
-        return redirect('/');
+
+        Project::create($attributes);
+
+        return redirect('/projects');
 
 
     }
