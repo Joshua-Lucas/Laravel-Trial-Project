@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body class="bg-linen text-storm font-mono flex flex-col justify-center lg:flex-row lg:justify-start lg:bg-local"  >
     <div class=" text-linen lg:h-screen lg:w-1/4 xl:w-1/5">
