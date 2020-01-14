@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Note;
 use App\Project;
+use App\Note;
 use App\User;
 
 
