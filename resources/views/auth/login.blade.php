@@ -11,7 +11,7 @@
     </div>
 
     <div class="w-3/6 flex justify-between mb-3 text-center rounded bg-linen text-storm opacity-50 sm: 2/6 lg:w-1/5 ">
-        <a href="/login" class="{{Request::is('login') ? 'login-toggol' : ''  }} flex-1 self-center mr-1">Login</a>
+        <a href="/login" class="{{Request::is('login') ? 'login-toggol' : ''  }} {{Request::is('/') ? 'login-toggol' : ''  }}  flex-1 self-center mr-1">Login</a>
         <a href="/register" class="{{Request::is('register') ? 'login-toggol' : ''  }} flex-1 self-center mr-1 ">Register</a>
     </div>
 
