@@ -15,7 +15,7 @@
 
     </div>
     @if ($project->notes->count())
-        <div>  
+        <div class=" bg-forest flex flex-col mb-4 p-4 text-center text-linen rounded-lg shadow-xl md:mx-6 lg:w-5/6 lg:self-center xl:w-4/5 ">  
             @foreach($project->notes as $note)
                 
                 <li>{{$note->updated_at}} by {{$note->editor}} "{{$note->notes}}" </li>
@@ -26,19 +26,19 @@
 
 <!-- FORM TO ADD NEW NOTE-->
 
-    <div>
+    <div class=" bg-forest flex flex-col text-center  text-linen rounded-lg shadow-xl md:mx-6 lg:w-5/6 lg:self-center xl:w-4/5">
         <form method="POST" action="/projects/{{ $project->id }}/notes">
             @csrf
         
 
-            <div>
+            <div class="m-3 w-full lg:w-3/4 mx-auto">
         
-                <label for="notes">Note</label>
-                <textarea name="notes" required ></textarea>
+               
+                <textarea name="notes" class="w-10/12 h-24 bg-transparent text-center border-2 border-white rounded placeholder-white resize-none" required placeholder='Notes'></textarea>
 
             </div>
-            <div>
-                <button type='submit'>Add Note</button>
+            <div class="m-3 w-full lg:w-3/4 mx-auto">
+                <button type='submit' class="w-10/12 p-2 rounded bg-gray-200 text-gray-900 shadow-md">Add Note</button>
             </div>
         </form>
 
