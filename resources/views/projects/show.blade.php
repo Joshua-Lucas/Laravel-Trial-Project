@@ -14,17 +14,7 @@
         <a href='/projects/{{$project -> id}}/edit'>Edit Project</a>
 
     </div>
-    @if ($project->notes->count())
-        <div class=" bg-forest flex flex-col mb-4 p-4 text-center text-linen rounded-lg shadow-xl md:mx-6 lg:w-5/6 lg:self-center xl:w-4/5 ">  
-            @foreach($project->notes as $note)
-                
-                <li>{{$note->updated_at}} by {{$note->editor}} "{{$note->notes}}" </li>
-
-            @endforeach
-        </div>
-    @endif
-
-<!-- FORM TO ADD NEW NOTE-->
+    <!-- FORM TO ADD NEW NOTE-->
 
     <div class=" bg-forest flex flex-col text-center  text-linen rounded-lg shadow-xl md:mx-6 lg:w-5/6 lg:self-center xl:w-4/5">
         <form method="POST" action="/projects/{{ $project->id }}/notes">
@@ -45,6 +35,37 @@
         @include ('errors')
 
     </div>
+
+<!-- Project Notes -->
+
+    @if ($project->notes->count())
+        <div class=" bg-forest flex flex-col mt-4 p-4 text-center text-linen rounded-lg shadow-xl md:mx-6 lg:w-5/6 lg:self-center xl:w-4/5 ">  
+                <div class="flex w-full my-1 flex-wrap justify-around">
+                    <div class="flex justify-between w-1/2">
+                        <p class=" m-1 ">Date</p>
+                        <p class=" m-1 px-2  ">Name</p>
+                    </div>
+                    <div class="flex justify-center w-1/2">
+                        <p>Note</p>
+                    </div>
+                </div> 
+
+            @foreach($project->notes as $note)
+                
+                <div class="flex w-full my-1 justify-between flex-wrap bg-sky text-storm rounded shadow-lg">
+                    <div class="flex justify-between w-1/2">
+                        <p class=" m-1 ">{{$note->updated_at}}</p>  
+                        <p class=" m-1 px-2  ">{{$note->editor}}</p>
+                    </div>
+                    <div class="flex justify-center w-1/2">
+                        <p class=" m-1 ">"{{$note->notes}}" </p>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    @endif
+
+
 </div>
 
 
