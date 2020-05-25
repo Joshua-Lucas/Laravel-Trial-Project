@@ -26,7 +26,7 @@ Route::get('/create', 'PageController@create');
 Route::post('/', 'PageController@store');
 Route::get('/projects/{project}/edit', 'PageController@edit');
 Route::patch('/projects/{project}', 'PageController@update');
-Route::delete('/create/{project}','PageController@destroy');
+Route::delete('/projects/{project}', 'PageController@destroy');
 
 Route::post('/projects/{project}/notes', 'PageNotesController@store');
 

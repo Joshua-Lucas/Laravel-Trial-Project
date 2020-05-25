@@ -7,51 +7,48 @@ use App\project;
 
 class PageController extends Controller
 {
-    
+
 
     public function __construct()
     {
         $this->middleware('auth');
     }
- 
 
 
-    Public function index() 
+
+    public function index()
     {
 
         $project = Project::all();
 
         return view('projects.index', ['project' => $project]);
-
     }
 
 
-    Public function show(Project $project)
+    public function show(Project $project)
     {
 
         return view('/projects/show', compact('project'));
-
     }
 
 
-    Public function create()
+    public function create()
     {
 
-        
-        return view('/projects/create');
 
+        return view('/projects/create');
     }
 
     public function store()
     {
 
 
-        $attributes =request()->validate ([
+        $attributes = request()->validate([
             'title' => ['required', 'min:3'],
-            'comments' => ['required','max:255'],
+            'comments' => ['required', 'max:255'],
         ]);
 
-        $attributes ['supervisor'] = auth()->user()->name;    
+        $attributes['supervisor'] = auth()->user()->name;
         $attributes['owner_id'] = auth()->id();
 
 
@@ -59,8 +56,6 @@ class PageController extends Controller
         Project::create($attributes);
 
         return redirect('/projects');
-
-
     }
 
     public function edit(Project $project)
@@ -68,8 +63,6 @@ class PageController extends Controller
 
 
         return view('projects/edit', compact('project'));
-
-
     }
 
 
@@ -79,32 +72,29 @@ class PageController extends Controller
     {
 
 
-        $attributes =request()->validate ([
-            'supervisor' => ['required', 'min:3', ],
-            'comments' => ['required','max:255'],
+        $attributes = request()->validate([
+            'supervisor' => ['required', 'min:3',],
+            'comments' => ['required', 'max:255'],
         ]);
 
 
         $project->update($attributes);
 
 
-        return view('/projects/show',compact('project'));
-
-
-
+        return view('/projects/show', compact('project'));
     }
 
 
 
-    public function delete(Project $project)
+    public function destroy(Project $project)
     {
 
+        if ($project->owner_id != auth()->id()) {
+            return response(["You are not authorized to delete this project"], 403);
+        }
 
+        $project->delete();
 
-
+        return redirect("/projects");
     }
-
-
-
-
 }
